@@ -1,0 +1,29 @@
+<div class="cart-container" *ngIf="!loading">
+  <h2>Your Cart</h2>
+
+  <div class="cart-item" *ngFor="let item of cartItems">
+    <img [src]="item.product.image" />
+
+    <div class="details">
+      <h3>{{ item.product.name }}</h3>
+      <p>{{ item.product.price }} BDT</p>
+      <p>Quantity: {{ item.quantity }}</p>
+
+      <button class="remove-btn" (click)="removeItem(item.product._id)">
+        Remove
+      </button>
+    </div>
+  </div>
+
+  <div class="total-box">
+    <h3>Total: {{ total }} BDT</h3>
+
+    <button class="checkout-btn" (click)="checkout()">
+      Proceed to Checkout
+    </button>
+  </div>
+</div>
+
+<div class="loading" *ngIf="loading">
+  Loading Cart...
+</div>

@@ -1,0 +1,34 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: center;
+  background: white;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  border-color: #961B39;
+}
+
+img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin: 8px 0;
+  color: #961B39;
+  font-size: 18px;
+}
+
+.price {
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+}

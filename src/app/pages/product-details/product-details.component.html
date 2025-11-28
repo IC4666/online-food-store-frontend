@@ -1,0 +1,22 @@
+<div class="container" *ngIf="!loading">
+
+  <div class="left">
+    <img [src]="product.image" alt="image">
+  </div>
+
+  <div class="right">
+    <h2>{{ product.name }}</h2>
+    <p class="price">{{ product.price }} BDT</p>
+
+    <p class="desc">{{ product.description }}</p>
+
+    <button (click)="addToCart()" class="btn-add">
+      Add to Cart
+    </button>
+  </div>
+
+</div>
+
+<div class="loading" *ngIf="loading">
+  Loading product...
+</div>

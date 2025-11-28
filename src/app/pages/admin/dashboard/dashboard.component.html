@@ -1,0 +1,41 @@
+<div class="dashboard-container" *ngIf="!loading">
+
+  <h2>Admin Dashboard</h2>
+
+  <div class="stats-grid">
+
+    <div class="stat-box">
+      <h3>{{ stats.totalProducts }}</h3>
+      <p>Products</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>{{ stats.totalOrders }}</h3>
+      <p>Orders</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>{{ stats.totalUsers }}</h3>
+      <p>Users</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>{{ stats.totalRevenue }} BDT</h3>
+      <p>Revenue</p>
+    </div>
+
+  </div>
+
+  <div class="admin-links">
+
+    <a routerLink="/admin/products" class="btn">Manage Products</a>
+    <a routerLink="/admin/orders" class="btn">Manage Orders</a>
+    <a routerLink="/admin/analytics" class="btn">View Analytics</a>
+
+  </div>
+
+</div>
+
+<div class="loading" *ngIf="loading">
+  Loading dashboard...
+</div>

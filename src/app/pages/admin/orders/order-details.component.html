@@ -1,0 +1,46 @@
+<div class="order-details" *ngIf="!loading">
++  <div *ngIf="order; else noOrder">
++    <h2>Order Details - {{ order._id }}</h2>
++
++    <section class="user-info">
++      <h3>User</h3>
++      <p><strong>Name:</strong> {{ order.user?.name || order.userInfo?.name }}</p>
++      <p><strong>Email:</strong> {{ order.user?.email || order.userInfo?.email }}</p>
++      <p><strong>Phone:</strong> {{ order.shipping?.phone || order.phone || '-' }}</p>
++    </section>
++
++    <section class="items">
++      <h3>Products</h3>
++      <ul>
++        <li *ngFor="let p of order.products">
++          <img [src]="p.product?.image || p.image" alt="{{ p.product?.name || p.name }}" />
++          <div class="meta">
++            <div class="name">{{ p.product?.name || p.name }}</div>
++            <div class="qty">Qty: {{ p.quantity }}</div>
++            <div class="price">Price: ₹{{ p.product?.price || p.price }}</div>
++          </div>
++        </li>
++      </ul>
++    </section>
++
++    <section class="summary">
++      <p><strong>Subtotal:</strong> ₹{{ order.subtotal || order.totalPrice }}</p>
++      <p><strong>Shipping:</strong> ₹{{ order.shipping?.cost || 0 }}</p>
++      <p><strong>Total:</strong> ₹{{ order.total || order.totalPrice || order.subtotal }}</p>
++      <p><strong>Status:</strong> {{ order.status }}</p>
++    </section>
++
++    <section class="actions">
++      <button (click)="updateStatus('Pending')">Set Pending</button>
++      <button (click)="updateStatus('Processing')">Set Processing</button>
++      <button (click)="updateStatus('Shipped')">Set Shipped</button>
++      <button (click)="updateStatus('Delivered')">Set Delivered</button>
++    </section>
++  </div>
++
++  <ng-template #noOrder>
++    <p>Order not found.</p>
++  </ng-template>
++</div>
++
++<div *ngIf="loading" class="loading">Loading...</div>

@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+.left img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #961B39;
+}
+
+.right {
+  flex: 1;
+}
+
+h2 {
+  color: #961B39;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.desc {
+  margin-bottom: 20px;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.btn-add {
+  background: #961B39;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-add:hover {
+  background: #7a152e;
+}
+
+.loading {
+  color: #961B39;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}

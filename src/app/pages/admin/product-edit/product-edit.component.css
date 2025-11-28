@@ -1,0 +1,41 @@
+.edit-container {
+  padding: 20px;
+}
+
+h2 {
+  color: #961B39;
+  margin-bottom: 20px;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #961B39;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 2px solid #961B39;
+}
+
+.submit-btn {
+  background: #961B39;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background: #7a152e;
+}

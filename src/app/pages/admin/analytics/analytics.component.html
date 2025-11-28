@@ -1,0 +1,37 @@
+<div class="analytics" *ngIf="!loading">
+  <h2>Analytics</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>{{ stats.totalProducts }}</h3>
+      <p>Products</p>
+    </div>
+    <div class="card">
+      <h3>{{ stats.totalOrders }}</h3>
+      <p>Orders</p>
+    </div>
+    <div class="card">
+      <h3>{{ stats.totalUsers }}</h3>
+      <p>Users</p>
+    </div>
+    <div class="card">
+      <h3>{{ stats.totalRevenue }} BDT</h3>
+      <p>Revenue</p>
+    </div>
+  </div>
+
+  <section class="best-selling">
+    <h3>Top Selling Products</h3>
+    <ul>
+      <li *ngFor="let b of stats.bestSelling">
+        <img [src]="b.product?.image" alt="{{ b.product?.name }}" />
+        <div class="meta">
+          <div class="name">{{ b.product?.name }}</div>
+          <div class="sold">Sold: {{ b.totalSold }}</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+
+<div *ngIf="loading" class="loading">Loading analytics...</div>

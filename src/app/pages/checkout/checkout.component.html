@@ -1,0 +1,40 @@
+<div class="checkout-container" *ngIf="!loading">
+
+  <h2>Checkout</h2>
+
+  <div class="form-box">
+
+    <label>Name *</label>
+    <input [(ngModel)]="name" type="text" />
+
+    <label>Email</label>
+    <input [(ngModel)]="email" type="email" />
+
+    <label>Phone *</label>
+    <input [(ngModel)]="phone" type="text" />
+
+    <label>Address *</label>
+    <textarea [(ngModel)]="address"></textarea>
+
+  </div>
+
+  <h3>Your Order</h3>
+
+  <div class="order-item" *ngFor="let item of cartItems">
+    <span>{{ item.product.name }}</span>
+    <span>{{ item.product.price }} × {{ item.quantity }}</span>
+  </div>
+
+  <div class="total-box">
+    <h3 >Total: {{ total }} BDT</h3>
+  </div>
+
+  <button class="place-order-btn" (click)="placeOrder()">
+    Place Order
+  </button>
+
+</div>
+
+<div class="loading" *ngIf="loading">
+  Loading Checkout...
+</div>

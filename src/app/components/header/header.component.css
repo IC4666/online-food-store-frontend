@@ -1,0 +1,89 @@
+:host {
+	display: block;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 0.6rem 1rem;
+	background: #ffffff;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+nav a {
+	color: #333333;
+	text-decoration: none;
+	margin-right: 0.75rem;
+	font-weight: 600;
+
+	&:hover {
+		color: #961B39;
+	}
+
+	&:active {
+		scale: .95;
+	}
+}
+
+nav a:first-child {
+	margin-right: 1.25rem;
+	font-size: 1.05rem;
+}
+
+/* Auth area */
+nav span {
+	margin-right: 0.6rem;
+	color: #222;
+	font-weight: bold;
+}
+
+button.logout {
+	background: transparent;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	padding: 0.35rem 0.6rem;
+	border-radius: 6px;
+	cursor: pointer;
+	color: #333;
+}
+
+button.logout:hover {
+	border-color: rgba(150, 27, 57, 0.12);
+	color: #961B39;
+}
+
+nav a.log-btn {
+	background: #961B39;
+	color: #fff;
+	padding: 0.5rem;
+	border-radius: 6px;
+	margin-right: 0.5rem;
+}
+
+
+/* Admin link emphasized */
+a.admin-link {
+	background: #961B39;
+	color: #ffffff;
+	padding: 0.35rem 0.6rem;
+	border-radius: 6px;
+}
+
+a.admin-link:hover {
+	background: #7d1530;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+	nav {
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	nav a {
+		margin-right: 0.5rem;
+	}
+}

@@ -1,0 +1,31 @@
+<div class="edit-container">
+  <h2>Edit Product</h2>
+
+  <div *ngIf="loading">Loading...</div>
+
+  <div *ngIf="!loading">
+    <form (ngSubmit)="updateProduct()" class="form-box">
+      <label>Name *</label>
+      <input [(ngModel)]="product.name" name="name" type="text" required />
+
+      <label>Description</label>
+      <textarea [(ngModel)]="product.description" name="description"></textarea>
+
+      <label>Price (BDT) *</label>
+      <input [(ngModel)]="product.price" name="price" type="number" required />
+
+      <label>Category *</label>
+      <input [(ngModel)]="product.category" name="category" type="text" required />
+
+      <label>Stock *</label>
+      <input [(ngModel)]="product.stock" name="stock" type="number" required />
+
+      <label>Image URL *</label>
+      <input [(ngModel)]="product.image" name="image" type="text" required />
+
+      <button type="submit" class="submit-btn">
+        Update Product
+      </button>
+    </form>
+  </div>
+</div>

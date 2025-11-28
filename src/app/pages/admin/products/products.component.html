@@ -1,0 +1,46 @@
+<div class="products-container" *ngIf="!loading">
+  
+  <h2>Manage Products</h2>
+
+  <button class="add-btn" routerLink="/admin/product-add">
+    Add New Product
+  </button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price (BDT)</th>
+        <th>Stock</th>
+        <th>Category</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let p of products">
+        <td><img [src]="p.image" /></td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.price }}</td>
+        <td>{{ p.stock }}</td>
+        <td>{{ p.category }}</td>
+
+        <td>
+          <button class="edit-btn" [routerLink]="['/admin/product-edit', p._id]">
+            Edit
+          </button>
+
+          <button class="delete-btn" (click)="deleteProduct(p._id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div class="loading" *ngIf="loading">
+  Loading products...
+</div>

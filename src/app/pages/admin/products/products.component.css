@@ -1,0 +1,81 @@
+.products-container {
+  padding: 20px;
+}
+
+h2 {
+  color: #961B39;
+  margin-bottom: 20px;
+}
+
+.add-btn {
+  background: #961B39;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.add-btn:hover {
+  background: #7a152e;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th {
+  background: #961B39;
+  color: white;
+  padding: 12px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+td img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid #961B39;
+}
+
+.edit-btn, .delete-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 5px;
+  border: none;
+}
+
+.edit-btn {
+  background: #961B39;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #7a152e;
+}
+
+.delete-btn {
+  background: #ff4343;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #cc0000;
+}
+
+.loading {
+  text-align: center;
+  color: #961B39;
+  font-size: 20px;
+  padding: 20px;
+}

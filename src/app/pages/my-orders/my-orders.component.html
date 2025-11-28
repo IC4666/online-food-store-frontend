@@ -1,0 +1,37 @@
+<div class="orders-container" *ngIf="!loading">
+
+  <h2>My Orders</h2>
+
+  <div class="order-card" *ngFor="let order of orders">
+
+    <div class="order-header">
+      <h3>Order ID : #{{ order._id }}</h3>
+      <span class="status">{{ order.status }}</span>
+    </div>
+
+    <p class="date">
+      {{ order.createdAt | date:'medium' }}
+    </p>
+
+    <div class="items-box">
+      <div class="item" *ngFor="let item of order.items">
+        <span>{{ item.product.name }}</span>
+        <span>{{ item.product.price }} × {{ item.quantity }}</span>
+      </div>
+    </div>
+
+    <div class="total">
+      Total: {{ order.totalPrice }} BDT
+    </div>
+
+    <button class="details-btn" [routerLink]="['/order-success', order._id]">
+      View Details
+    </button>
+
+  </div>
+
+</div>
+
+<div class="loading" *ngIf="loading">
+  Loading orders...
+</div>

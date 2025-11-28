@@ -1,0 +1,10 @@
+.order-details{max-width:900px;margin:20px auto;padding:20px;background:#fff;border-radius:8px}
+.order-details h2{color:#961B39;margin-bottom:12px}
+.user-info, .items, .summary{margin-bottom:16px}
+.items ul{list-style:none;padding:0}
+.items li{display:flex;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid #eee}
+.items img{width:64px;height:64px;object-fit:cover;border-radius:6px}
+.items .meta{display:flex;flex-direction:column}
+.actions{display:flex;gap:8px}
+.actions button{background:#961B39;color:#fff;border:none;padding:8px 12px;border-radius:4px;cursor:pointer}
+.loading{text-align:center;padding:20px}

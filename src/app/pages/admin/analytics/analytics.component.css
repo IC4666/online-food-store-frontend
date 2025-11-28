@@ -1,0 +1,9 @@
+.analytics{max-width:1000px;margin:20px auto;padding:20px;background:#fff;border-radius:8px}
+.cards{display:flex;gap:12px;margin-bottom:20px}
+.card{flex:1;padding:12px;border-radius:6px;background:#f9f9f9;text-align:center}
+.card h3{color:#961B39;margin:0}
+.best-selling ul{list-style:none;padding:0}
+.best-selling li{display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid #eee}
+.best-selling img{width:64px;height:64px;object-fit:cover;border-radius:6px}
+.best-selling .meta{display:flex;flex-direction:column}
+.loading{text-align:center;padding:20px}

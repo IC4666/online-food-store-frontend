@@ -1,0 +1,22 @@
+<header>
+  <h1>OnlineFoodStore</h1>
+</header>
+<nav>
+  <a routerLink="/">Home</a>
+  <a routerLink="/products">Products</a>
+  <a routerLink="/cart">Cart</a>
+
+  <ng-container *ngIf="!auth.isLoggedIn()">
+    <a class="log-btn" routerLink="/login">Login</a>
+    <a class="log-btn" routerLink="/register">Register</a>
+  </ng-container>
+
+  <ng-container *ngIf="auth.isLoggedIn()">
+    <a routerLink="/my-orders">My Orders</a>
+    <a *ngIf="auth.isAdmin()" routerLink="/admin/dashboard">Dashboard</a>
+
+    <span [style.color]="auth.isAdmin() ? 'green' : '#961B39'">Hi, {{ auth.getUser()?.name }}</span>
+    <button class="logout" (click)="logout()">Logout</button>
+  </ng-container>
+</nav>
+
