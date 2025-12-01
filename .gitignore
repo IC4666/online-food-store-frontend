@@ -45,3 +45,13 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+
+
+echo "# online-food-store-frontend" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/IC4666/online-food-store-frontend.git
+git push -u origin main

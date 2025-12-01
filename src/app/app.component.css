@@ -1,8 +1,18 @@
 .home {
     min-height: 100dvh;
- display: grid;
+    display: grid;
     grid-template-rows: auto 1fr auto;
-}
-.footer{
- margin-top: auto;
+
+    .header {
+        position: sticky;
+        inset: 0rem;
+       	z-index: 9999;
+    }
+    .main{
+        margin: 1rem;
+    }
+
+    .footer {
+        margin-top: auto;
+    }
 }
